@@ -384,13 +384,15 @@ body {
   font-size: 2em;
   color: #EB3B83; }
 #wrapper_map .menu #menu_content {
-  display: none; }
+  display: none;
+  background-color: rgba(250, 250, 250, 0.7);
+  padding: 2% 0; }
   #wrapper_map .menu #menu_content ul {
     list-style-type: none;
     width: 100%; }
     #wrapper_map .menu #menu_content ul li {
       display: block;
-      margin-top: 5%;
+      margin-top: 2%;
       text-align: center; }
 #wrapper_map #content_map {
   height: 85vh;
