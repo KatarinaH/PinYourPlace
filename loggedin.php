@@ -15,6 +15,7 @@
 					<li> Hotell </li>
 					<li> Affärer </li>
 					<li> Nöjen </li>
+					<li><a href="index.php?loggedout">Logga ut</a></li>
 				</ul>
 			</div>
 		</div>
