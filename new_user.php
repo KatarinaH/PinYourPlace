@@ -1,5 +1,7 @@
 <?php 
 	include "header.php"; 
+
+	include "db_connect.php";
 	
 	if(isset($_GET["not_set2"])){ //om man försöker gå in på map.php inloggad 
 		$not_set2_msg = "<p class='error'>Du måste fylla i alla fält!</p>";
@@ -29,7 +31,6 @@
 	</div>
 
 	<?php
-		include "db_connect.php";
 
 		if(isset($_POST["reg"])){
 			if(empty($_POST["fname"]) || empty($_POST["lname"]) || empty($_POST["email"]) || empty($_POST["username"]) || empty($_POST["password"])) { //om man inte har fyllt i alla rutor i formuläret
