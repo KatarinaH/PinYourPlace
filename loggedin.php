@@ -22,7 +22,7 @@ if(isset($_POST["login"])){
 	</script>
 	<div id="wrapper_map">
 
-		<div class="menu">
+		<div class="mobile_menu">
 			<i class="fa fa-bars"></i>
 			<div id="menu_content">
 				<ul>
