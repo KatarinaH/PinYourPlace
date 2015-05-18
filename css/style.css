@@ -408,4 +408,12 @@ body {
     margin: 0 auto;
     margin-top: 10px; }
 
+#registrate {
+  background-color: rgba(250, 250, 250, 0.7);
+  height: 70vh;
+  margin: 0 auto;
+  width: 300px; }
+  #registrate form input {
+    margin: 3%; }
+
 /*# sourceMappingURL=style.css.map */
