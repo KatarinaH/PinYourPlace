@@ -1,4 +1,9 @@
 <?php include "header.php"; ?>
+
+	<script 
+	type="text/javascript" 
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGIgmodIPp6-FkD_YsPkwR8V3_VqCi4Ac">
+	</script>
 	<div id="wrapper_map">
 
 		<div class="menu">
