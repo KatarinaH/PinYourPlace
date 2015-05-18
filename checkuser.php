@@ -17,7 +17,6 @@
 
 		if (mysqli_num_rows($result) == 1) { //Kollar om det finns någon användare med det användarnamnet.
 			$_SESSION["logged_in"] = TRUE; //Finns användaren sätts sessionsvariabeln logged_in till TRUE
-
 			
 			while($row = mysqli_fetch_array($result)) { 
 				$_SESSION["user_id"] = $row["id_user"];

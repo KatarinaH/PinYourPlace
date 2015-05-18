@@ -18,7 +18,7 @@
 			<input type="text" id="contact_name" name="fname" placeholder="Förnamn"/><br/>
 			<input type="text" id="contact_lname" name="lname" placeholder="Efternamn"/><br/>
 			<input type="email" id="contact_email" name="email" placeholder="Email"/><br/>
-			<input type="text" id="user_name" name="username" placeholder="Användarnamn"/><br/>
+			<input type="text" id="username" name="username" placeholder="Användarnamn"/><span id="feedback"></span><br/>
 			<input type="password" id="password" name="password" placeholder="Lösenord"/><br/>
 
 			<input type="submit" value="Registrera dig!" name="reg" id="reg-btn">

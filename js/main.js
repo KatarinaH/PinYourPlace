@@ -1,4 +1,24 @@
 $(document).ready(function() {
+
+	$("#registrate #username").blur(function(e){
+		if($("#username").val().length == 1){
+			 $("#feedback").html("");
+		}
+
+		$.post("check-username.php", {name: $("#username").val()}).done(function(data){
+			console.log(data);
+			if(data == "success") {
+				$("#feedback").html("Ledigt!");
+			}else {
+				$("#feedback").html("FAIL!");
+			}
+			
+
+		});
+
+		
+	});
+
 	//Betsämmer vilken del av kartan man ska se.
 	var mapOptions = {
 		center: {lat: 59.346027, lng: 18.058272},
@@ -30,4 +50,8 @@ $(document).ready(function() {
 	$('.menu .fa-bars').on('click', function(){
 		$('#menu_content').slideToggle('slow');
 	});
+
+
+
+	
 });
