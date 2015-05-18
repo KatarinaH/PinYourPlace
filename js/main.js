@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
 	$("#registrate #username").blur(function(e){
-		if($("#username").val().length == 1){
+		/*if($("#username").val().length == 1){
 			 $("#feedback").html("");
-		}
+		}*/
 
 		$.post("check-username.php", {name: $("#username").val()}).done(function(data){
 			console.log(data);
