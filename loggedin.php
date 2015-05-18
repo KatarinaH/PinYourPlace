@@ -26,12 +26,12 @@ if(isset($_POST["login"])){
 			<i class="fa fa-bars"></i>
 			<div id="menu_content">
 				<ul>
-					<li> Alla </li>
-					<li> Restauranger </li>
-					<li> Hotell </li>
-					<li> Affärer </li>
-					<li> Nöjen </li>
-					<li><a href="index.php?loggedout">Logga ut</a></li>
+					<li> Alla <i class="fa fa-globe"></i></li>
+					<li> Restauranger <i class="fa fa-cutlery"></i></li>
+					<li> Hotell <i class="fa fa-bed"></i></li>
+					<li> Affärer <i class="fa fa-shopping-cart"></i></li>
+					<li> Nöjen <i class="fa fa-glass"></i></li>
+					<li><a href="index.php?loggedout">Logga ut <i class="fa fa-sign-out"></i></a></li>
 				</ul>
 			</div>
 		</div>
