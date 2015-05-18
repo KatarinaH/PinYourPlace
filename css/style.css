@@ -393,7 +393,12 @@ body {
     #wrapper_map .menu #menu_content ul li {
       display: block;
       margin-top: 2%;
-      text-align: center; }
+      text-align: center;
+      text-transform: uppercase; }
+      #wrapper_map .menu #menu_content ul li a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black; }
 #wrapper_map #content_map {
   height: 85vh;
   margin-bottom: 20px;

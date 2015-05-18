@@ -49,7 +49,14 @@ body {
 				li {
 					display: block;
 					margin-top: 2%;
-					text-align: center;					
+					text-align: center;
+					text-transform: uppercase;
+
+					a {
+						text-decoration: none;
+						text-transform: uppercase;
+						color: black;
+					}				
 				}
 			}	
 		}	
