@@ -8,7 +8,7 @@ $(document).ready(function() {
 		//draggable: false //Gör att man inte kan dra och flytta kartan.
 	};
 
-	var mapStyle = [{ //Stylar kartan svartvits
+	var mapStyle = [{ //Stylar kartan svartvit
 		featureType: 'all',
 		elementType: 'geometry',
 		stylers: [
