@@ -384,9 +384,8 @@ body {
   font-size: 2em;
   color: #EB3B83; }
 #wrapper_map .menu #menu_content {
-  display: block; }
+  display: none; }
   #wrapper_map .menu #menu_content ul {
-    display: none;
     list-style-type: none;
     width: 100%; }
     #wrapper_map .menu #menu_content ul li {

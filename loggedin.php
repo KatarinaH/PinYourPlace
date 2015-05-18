@@ -2,6 +2,7 @@
 	<div id="wrapper_map">
 
 		<div class="menu">
+			<i class="fa fa-bars"></i>
 			<div id="menu_content">
 				<ul>
 					<li> Alla </li>
@@ -11,7 +12,6 @@
 					<li> Nöjen </li>
 				</ul>
 			</div>
-			<i class="fa fa-bars"></i>
 		</div>
 
 		<div id="content_map">

@@ -27,5 +27,7 @@ $(document).ready(function() {
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
-
+	$('.menu .fa-bars').on('click', function(){
+		$('#menu_content').slideToggle('slow');
+	});
 });
