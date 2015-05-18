@@ -3,10 +3,10 @@ include "header.php";
 
 if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "TRUE";
-	echo "Välkommen:";
+	echo ":";
 } else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	// redan inloggad, allt ok
-	echo "Välkommen:";
+	echo ":";
 } else {
 	// försöker komma åt sidan utan att vara inloggad
 	// skicka till login-sidan

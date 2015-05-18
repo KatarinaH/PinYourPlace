@@ -4,7 +4,9 @@ $(document).ready(function() {
 	var mapOptions = {
 		center: {lat: 59.346027, lng: 18.058272},
 		zoom: 15,
-		scrollwheel: false, //Gör att man inte kan scrolla i kartan
+		scrollwheel: false,
+		//disableDefaultUI: true
+		//disableDoubleClickZoom: true //Gör att man inte kan scrolla i kartan
 		//draggable: false //Gör att man inte kan dra och flytta kartan.
 	};
 
@@ -48,4 +50,26 @@ $(document).ready(function() {
 	*/
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
+
+	var infowindow = new google.maps.InfoWindow({
+	});
+
+	var marker = new google.maps.Marker({
+
+		map: map,
+		title: 'Extinguisher',
+		animation: google.maps.Animation.DROP,
+		icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+	});
+
+	google.maps.event.addListener(marker, 'click', function(){
+		infowindow.open(map, marker);
+	});
+
+	google.maps.event.addListener(map, 'click', function(e){
+		var lat = e.latLng.A;
+		var lng = e.latLng.F;
+		marker.setPosition(new google.maps.LatLng(lat, lng));
+	});
+
 });
