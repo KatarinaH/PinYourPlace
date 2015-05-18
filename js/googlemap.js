@@ -26,5 +26,26 @@ $(document).ready(function() {
 		mapOptions
 	);
 
+	/* SEARCHBOX - NOT WORKING
+	// Create the search box and link it to the UI element.
+  	var input = document.getElementById('pac-input');
+ 	map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+ 	var searchBox = new google.maps.places.SearchBox(input);
+
+	// Listen for the event fired when the user selects an item from the
+	// pick list. Retrieve the matching places for that item.
+	google.maps.event.addListener(searchBox, 'places_changed', function() {
+		var places = searchBox.getPlaces();
+
+	    if (places.length == 0) {
+	      return;
+	    }
+	    for (var i = 0, marker; marker = markers[i]; i++) {
+	      marker.setMap(null);
+	    }
+	});
+	*/
+
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 });
