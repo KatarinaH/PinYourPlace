@@ -12,8 +12,9 @@
 ?>
 
 
-	
+<id="wrapper_register">	
 	<div id="registrate">
+		<h2>Registrera dig här </h2>
 		<form method="post" action="">
 			<input type="text" id="contact_name" name="fname" placeholder="Förnamn"/><br/>
 			<input type="text" id="contact_lname" name="lname" placeholder="Efternamn"/><br/>
@@ -24,9 +25,8 @@
 			<input type="submit" value="Registrera dig!" name="reg" id="reg-btn">
 
 		</form>
-
-
 	</div>
+</div>
 
 	<?php
 		include "db_connect.php";
