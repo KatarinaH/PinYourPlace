@@ -15,7 +15,7 @@ $(document).ready(function() {
 		});		
 	});
 
-	$('.menu .fa-bars').on('click', function(){
+	$('.mobile_menu .fa-bars').on('click', function(){
 		$('#menu_content').slideToggle('slow');
 	});
 });

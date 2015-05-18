@@ -10,7 +10,8 @@
 	echo "<p> $not_set2_msg </p>";
 
 ?>
-<id="wrapper_register">	
+<div id="wrapper_register">	
+	
 	<div id="registrate">
 		<h2>Registrera dig här </h2>
 		<form method="post" action="">

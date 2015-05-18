@@ -17,4 +17,5 @@ session_start(); //startar session
 	<div id="logo">
 		<img src="img/pyp2.png" alt="logo-PinYourPlace">
 	</div>
+
 	
