@@ -34,6 +34,7 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 
 ?>
 	<div id="startpage">
+	
 		<?php	
 			echo "<p> $logged_out_msg </p>"; //meddelande visas - utloggad
 			echo "<p> $error_msg </p>"; //meddelande visas - okänd användare

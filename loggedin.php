@@ -3,10 +3,8 @@ include "header.php";
 
 if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "TRUE";
-	echo "Välkommen:";
 } else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	// redan inloggad, allt ok
-	echo "Välkommen:";
 } else {
 	// försöker komma åt sidan utan att vara inloggad
 	// skicka till login-sidan
@@ -20,21 +18,34 @@ if(isset($_POST["login"])){
 	type="text/javascript" 
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGIgmodIPp6-FkD_YsPkwR8V3_VqCi4Ac">
 	</script>
-	<div id="wrapper_map">
-
-		<div class="mobile_menu">
-			<i class="fa fa-bars"></i>
-			<div id="menu_content">
-				<ul>
-					<li> Alla <i class="fa fa-globe"></i></li>
-					<li> Restauranger <i class="fa fa-cutlery"></i></li>
-					<li> Hotell <i class="fa fa-bed"></i></li>
-					<li> Affärer <i class="fa fa-shopping-cart"></i></li>
-					<li> Nöjen <i class="fa fa-glass"></i></li>
-					<li><a href="index.php?loggedout">Logga ut <i class="fa fa-sign-out"></i></a></li>
-				</ul>
-			</div>
+	<div class="mobile_menu">
+		<i class="fa fa-bars"></i>
+		<div id="menu_content">
+			<ul>
+				<li> Alla <i class="fa fa-globe"></i></li>
+				<li> Restauranger <i class="fa fa-cutlery"></i></li>
+				<li> Hotell <i class="fa fa-bed"></i></li>
+				<li> Affärer <i class="fa fa-shopping-cart"></i></li>
+				<li> Nöjen <i class="fa fa-glass"></i></li>
+				<li><a href="index.php?loggedout">Logga ut <i class="fa fa-sign-out"></i></a></li>
+			</ul>
 		</div>
+	</div>
+	<div class="clearfix"></div>
+
+	<div class="desktop_menu">
+		<div id="menu_content_descktop">
+			<ul>
+				<li><i class="fa fa-globe"></i> Alla </li>
+				<li><i class="fa fa-cutlery"></i> Restauranger </li>
+				<li><i class="fa fa-bed"></i> Hotell </li>
+				<li><i class="fa fa-shopping-cart"></i> Affärer </li>
+				<li><i class="fa fa-glass"></i> Nöjen </li>
+				<li><a href="index.php?loggedout"><i class="fa fa-sign-out"></i>Logga ut </a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="wrapper_map">
 
 		<div id="content_map">
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
