@@ -10,7 +10,7 @@ $(document).ready(function() {
 			if(data == "success") {
 				$("#feedback").html("Ledigt!");
 			}else {
-				$("#feedback").html("FAIL!");
+				$("#feedback").html("Användarnamnet är upptaget");
 			}
 		});		
 	});
