@@ -1,4 +1,20 @@
-<?php include "header.php"; ?>
+<?php 
+include "header.php"; 
+
+if(isset($_POST["login"])){
+	$_SESSION["logged_in"] = "TRUE";
+	echo "Välkommen:";
+} else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
+	// redan inloggad, allt ok
+	echo "Välkommen:";
+} else {
+	// försöker komma åt sidan utan att vara inloggad
+	// skicka till login-sidan
+	$_SESSION["logged_in"] = "FALSE";
+	header("Location: index.php?not_set");
+}
+
+?>
 
 	<script 
 	type="text/javascript" 

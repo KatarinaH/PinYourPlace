@@ -1,10 +1,18 @@
-<?php 
+<?php
+include "header.php"; 
+
+if(isset($_GET["loggedout"])) { //om man har klickat på "logga ut" avslutas session
+	unset($_SESSION["logged_in"]);
+	$logged_out_msg = "<p class='error'>Du är nu utloggad</p>";	
+} else {
+	$logged_out_msg = "";
+}
+
 if(isset($_GET["not_set"])){ //om man försöker gå in på dashboard, new_post eller comments utan att vara inloggad 
 	$not_set_msg = "<p class='error'>Du måste fylla i dina användaruppgifter!</p>";
 } else {
 	$not_set_msg = "";
 }
-
 
 if(isset($_GET["unknown"])){ //Om användare och lösenord inte finns
 	$error_msg = "<p class='error'> Okänd användare, försök igen!</p>";
@@ -18,13 +26,16 @@ if(isset($_GET["succeed_reg"])){ //Om registrering av ny användare lyckas
 	$succeed_reg = "";
 }
 
+if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
+	header("Location: loggedin.php");
+}
 
-include "header.php"; 
+
 
 ?>
 	<div id="startpage">
 		<?php	
-			//echo "<p> $logged_out_msg </p>"; //meddelande visas - utloggad
+			echo "<p> $logged_out_msg </p>"; //meddelande visas - utloggad
 			echo "<p> $error_msg </p>"; //meddelande visas - okänd användare
 			echo "<p> $not_set_msg </p>"; //meddelande visas - ej ifyllda uppgifter
 		?>	
