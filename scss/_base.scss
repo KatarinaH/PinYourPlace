@@ -7,8 +7,6 @@ body {
 	height: 100vh;
 }
 
-
-
 #logo {
 	padding: 10px;
 	img {
@@ -24,7 +22,6 @@ body {
 	font-family: "Neucha";
 	margin: 0 auto;
 	text-align: center;
-	
 }
 
 #startpage {
@@ -37,11 +34,23 @@ body {
 
 #wrapper_map {
 	.menu {
+		.fa-bars{
+			font-size: 2em;
+			color: #EB3B83;
+		}
 		#menu_content {
+			display: block;
 			ul {
+				display: none;
 				list-style-type: none;
-			}
-			
+				width: 100%;
+
+				li {
+					display: block;
+					margin-top: 5%;
+					text-align: center;					
+				}
+			}	
 		}	
 	}
 
