@@ -380,16 +380,18 @@ body {
   #startpage input {
     margin-bottom: 20px; }
 
-#content_map {
+#wrapper_map .menu #menu_content ul {
+  list-style-type: none; }
+#wrapper_map #content_map {
   height: 85vh;
   margin-bottom: 20px;
   width: 100%; }
-  #content_map #map {
+  #wrapper_map #content_map #map {
     height: 70vh;
     margin: 0 auto;
     margin-top: 30px;
     width: 300px; }
-  #content_map #new_pin {
+  #wrapper_map #content_map #new_pin {
     display: block;
     margin: 0 auto;
     margin-top: 10px; }

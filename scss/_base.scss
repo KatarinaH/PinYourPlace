@@ -7,6 +7,8 @@ body {
 	height: 100vh;
 }
 
+
+
 #logo {
 	padding: 10px;
 	img {
@@ -33,7 +35,17 @@ body {
 	}
 }
 
-#content_map {
+#wrapper_map {
+	.menu {
+		#menu_content {
+			ul {
+				list-style-type: none;
+			}
+			
+		}	
+	}
+
+	#content_map {
 	height: 85vh;
 	margin-bottom: 20px;
 	width: 100%;
@@ -49,4 +61,6 @@ body {
 		margin: 0 auto;
 		margin-top: 10px;
 	}
+}
+	
 }
