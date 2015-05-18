@@ -3,15 +3,12 @@ include "header.php";
 
 if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "TRUE";
-<<<<<<< HEAD
-	echo ":";
+
+} else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
+
 } else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	// redan inloggad, allt ok
-	echo ":";
-=======
-} else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
-	// redan inloggad, allt ok
->>>>>>> origin/master
+
 } else {
 	// försöker komma åt sidan utan att vara inloggad
 	// skicka till login-sidan
