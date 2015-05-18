@@ -1,6 +1,4 @@
 <?php 
-session_start();
-
 if(isset($_GET["not_set"])){ //om man försöker gå in på dashboard, new_post eller comments utan att vara inloggad 
 	$not_set_msg = "<p class='error'>Du måste fylla i dina användaruppgifter!</p>";
 } else {
