@@ -1,13 +1,13 @@
 <?php 
 	include "header.php"; 
 	
-	/*if(isset($_GET["not_set2"])){ //om man försöker gå in på map.php inloggad 
+	if(isset($_GET["not_set2"])){ //om man försöker gå in på map.php inloggad 
 		$not_set2_msg = "<p class='error'>Du måste fylla i alla fält!</p>";
 	} else {
 		$not_set2_msg = "";
 	}
 
-	echo "<p> $not_set2_msg </p>";*/
+	echo "<p> $not_set2_msg </p>";
 
 ?>
 
