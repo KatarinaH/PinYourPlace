@@ -13,7 +13,7 @@
 	$result = mysqli_query($dbc, $query) 
 		or die("Error querying database.");
 
-	if (mysqli_num_rows($result) == 1) { //Kollar om det finns någon användare med det användarnamnet.
+	if (mysqli_num_rows($result) > 0) { //Kollar om det finns någon användare med det användarnamnet.
 		echo "fail"; 	
 	}else {
 		echo "success";
