@@ -75,7 +75,9 @@ $(document).ready(function() {
 
 	$("#submitInfo").on('click', function(){
 		var title = $('#pintitle').val();
-		$.post( "savepin.php", {title: title}, function( data ) {
+		var address = $('#address').val();
+		var description = $('#description').val();
+		$.post( "savepin.php", {title: title, address: address, description: description}, function( data ) {
 			console.log(data);
 		});
 	});

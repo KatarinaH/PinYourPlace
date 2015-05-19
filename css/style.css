@@ -452,7 +452,8 @@ body {
 #info {
   display: none; }
   #info form input {
-    margin: 3%; }
+    margin: 3%;
+    width: 200px; }
   #info form select {
     font-family: "FontAwesome", arial; }
 

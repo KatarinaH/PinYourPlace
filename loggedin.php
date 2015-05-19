@@ -56,7 +56,7 @@ if(isset($_POST["login"])){
 				<form method="post">
 					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>
 					<input type="text" id="address" name="address" placeholder="Adress"/><br/>
-					<textarea rows="4" cols="40" id="description" placeholder="Beskrivning"></textarea><br/>
+					<textarea rows="4" cols="40" id="description" name="decription" placeholder="Beskrivning"></textarea><br/>
 					<select>
 						<option value="" selected disabled="">Välj kategori</option>
 						<option value="restaurant">&#xf0f5; Restaurang</option>
@@ -64,7 +64,7 @@ if(isset($_POST["login"])){
 						<option value="shopping">&#xf07a; Affärer </option>
 						<option value="fun">&#xf000; Nöjen</option>
 					</select><br/>
-					<input id="submitInfo" type="button" value="Lägg till Pin"/>
+					<input id="submitInfo" type="button" value="Lägg till Pin" name="addPin"/>
 				</form>
 			</div>
 			<!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">-->
