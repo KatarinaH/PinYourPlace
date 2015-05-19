@@ -70,6 +70,15 @@ $(document).ready(function() {
 		var lat = e.latLng.A;
 		var lng = e.latLng.F;
 		marker.setPosition(new google.maps.LatLng(lat, lng));
+		$("#info").fadeIn();
 	});
+
+	$("#submitInfo").on('click', function(){
+		var title = $('#pintitle').val();
+		$.post( "savepin.php", {title: title}, function( data ) {
+			console.log(data);
+		});
+	});
+
 
 });

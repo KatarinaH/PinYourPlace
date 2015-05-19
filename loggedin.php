@@ -57,6 +57,11 @@ if(isset($_POST["login"])){
 			<div id="map"></div>
 		</div>
 
+		<div id="info">
+			<input type="text" id="pintitle" />
+			<input id="submitInfo" type="button" value="hej hopp!"/>
+		</div>
+
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

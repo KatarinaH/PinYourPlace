@@ -448,6 +448,9 @@ body {
   #registrate form input {
     margin: 3%; }
 
+#info {
+  display: none; }
+
 @media screen and (min-width: 1200px) {
   /**************************************************************/
   /*************************LOGO MENU****************************/
