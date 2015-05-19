@@ -3,7 +3,7 @@
 
 
 $tabletbreakpoint: 700px;
-$desktopbreakpoint: 1320px;
+$desktopbreakpoint: 1200px;
 
 @media screen and (max-width: $tabletbreakpoint - 1) {
 	@import "mobile";
