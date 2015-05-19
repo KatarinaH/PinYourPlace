@@ -479,7 +479,6 @@ body {
           text-decoration: underline; }
         .desktop_menu ul li a {
           color: #EB3B83;
-          text-decoration: none;
-          text-transform: uppercase; } }
+          text-decoration: none; } }
 
 /*# sourceMappingURL=style.css.map */
