@@ -419,9 +419,9 @@ body {
         text-transform: uppercase;
         padding: 10px; }
         .mobile_menu #menu_content ul li a {
+          color: #EB3B83;
           text-decoration: none;
-          text-transform: uppercase;
-          color: black; }
+          text-transform: uppercase; }
 
 /**************************************************************/
 /**************************LOGGEDIN****************************/
