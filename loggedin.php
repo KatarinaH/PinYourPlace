@@ -50,17 +50,28 @@ if(isset($_POST["login"])){
 		</div>
 	</div>
 	<div id="wrapper_map">
-
 		<div id="content_map">
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
+			<div id="info">
+				<form method="post">
+					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>
+					<input type="text" id="address" name="address" placeholder="Adress"/><br/>
+					<textarea rows="4" cols="40" id="description" placeholder="Beskrivning"></textarea><br/>
+					<select>
+						<option value="" selected disabled="">Välj kategori</option>
+						<option value="restaurant">&#xf0f5; Restaurang</option>
+						<option value="hotel">&#xf236; Hotell </option>
+						<option value="shopping">&#xf07a; Affärer </option>
+						<option value="fun">&#xf000; Nöjen</option>
+					</select><br/>
+					<input id="submitInfo" type="button" value="Lägg till Pin"/>
+				</form>
+			</div>
 			<!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">-->
 			<div id="map"></div>
 		</div>
 
-		<div id="info">
-			<input type="text" id="pintitle" />
-			<input id="submitInfo" type="button" value="hej hopp!"/>
-		</div>
+
 
 	</div>
 

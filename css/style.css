@@ -427,8 +427,9 @@ body {
 /**************************LOGGEDIN****************************/
 /**************************************************************/
 #wrapper_map #content_map {
-  height: 85vh;
+  height: auto;
   margin-bottom: 20px;
+  padding: 10px;
   width: 100%; }
   #wrapper_map #content_map #map {
     height: 70vh;
@@ -450,6 +451,10 @@ body {
 
 #info {
   display: none; }
+  #info form input {
+    margin: 3%; }
+  #info form select {
+    font-family: "FontAwesome", arial; }
 
 @media screen and (min-width: 1200px) {
   /**************************************************************/

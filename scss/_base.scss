@@ -97,8 +97,9 @@ body {
 
 #wrapper_map {
 	#content_map {
-	height: 85vh;
+	height: auto;
 	margin-bottom: 20px;
+	padding: 10px;
 	width: 100%;
 		#map {
 			height: 70vh;
@@ -131,4 +132,12 @@ body {
 
 #info {
 	display: none;
+	form {
+		input {
+			margin: 3%;
+		}
+		select {
+			font-family: "FontAwesome", arial;
+		}
+	}
 }
