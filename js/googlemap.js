@@ -68,15 +68,22 @@ $(document).ready(function() {
 	google.maps.event.addListener(map, 'click', function(e){
 		var lat = e.latLng.A;
 		var lng = e.latLng.F;
+		
 		marker.setPosition(new google.maps.LatLng(lat, lng));
 		$("#info").fadeIn();
+		$('#lng').val(lng);
+		$('#lat').val(lat);
 	});
 
 	$("#submitInfo").on('click', function(){
+		var lng = $('#lng').val();
+		var lat = $('#lat').val();
 		var title = $('#pintitle').val();
 		var address = $('#address').val();
 		var description = $('#description').val();
 		$.post( "savepin.php", {
+			'lng': lng,
+			'lat': lat,
 			'title': title,
 			'address': address,
 			'description': description
