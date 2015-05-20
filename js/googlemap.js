@@ -81,12 +81,12 @@ $(document).ready(function() {
 			'address': address,
 			'description': description
 		}, function( data ) {
-			//console.log(data);
-			if (data === 'success') {
-				console.log("HOPPHEJKLKAÖLKA");
+			console.log(data);
+			if (data == 'success') {
+				console.log("rätt");
 				$("#info").fadeOut();
 			} else {
-				console.log("daaksjldsk");
+				console.log("error");
 			}
 		});
 	});

@@ -8,8 +8,9 @@
 		    $title = $_POST["title"];
 			$address = $_POST["address"];
 			$description = $_POST["description"];
-			$category = $_POST["category"];
+			//$category = $_POST["category"];
 			
+
 			$result = mysqli_query($dbc, $query = "INSERT INTO pin (lng, lat, title, address, description, id_user, id_category) VALUES ('','', '$title', '$address','$description', '', '')");
 
 			if($result) {
