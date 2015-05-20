@@ -77,7 +77,11 @@ $(document).ready(function() {
 		var title = $('#pintitle').val();
 		var address = $('#address').val();
 		var description = $('#description').val();
-		$.post( "savepin.php", {title: title, address: address, description: description}, function( data ) {
+		$.post( "savepin.php", {
+			'title': title,
+			'address': address,
+			'description': description
+		}, function( data ) {
 			console.log(data);
 		});
 	});

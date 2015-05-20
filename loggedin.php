@@ -56,7 +56,7 @@ if(isset($_POST["login"])){
 				<form method="post">
 					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>
 					<input type="text" id="address" name="address" placeholder="Adress"/><br/>
-					<textarea rows="4" cols="40" id="description" name="decription" placeholder="Beskrivning"></textarea><br/>
+					<textarea rows="4" cols="40" id="description" name="description" placeholder="Beskrivning"></textarea><br/>
 					<select>
 						<option value="" selected disabled="">Välj kategori</option>
 						<option value="restaurant">&#xf0f5; Restaurang</option>
