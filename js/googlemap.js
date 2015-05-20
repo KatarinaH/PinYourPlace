@@ -81,12 +81,16 @@ $(document).ready(function() {
 		var title = $('#pintitle').val();
 		var address = $('#address').val();
 		var description = $('#description').val();
+		var category = $('#selectCategory option:selected').val();
+		//var category = $('#selectCategory option:selected').data('status');
+		
 		$.post( "savepin.php", {
 			'lng': lng,
 			'lat': lat,
 			'title': title,
 			'address': address,
-			'description': description
+			'description': description,
+			'category': category
 		}, function( data ) {
 			if (data == 'success') {
 				$("#info").fadeOut();

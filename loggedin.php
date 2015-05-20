@@ -59,12 +59,12 @@ if(isset($_POST["login"])){
 					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>
 					<input type="text" id="address" name="address" placeholder="Adress"/><br/>
 					<textarea rows="4" cols="40" id="description" name="description" placeholder="Beskrivning"></textarea><br/>
-					<select>
+					<select name="category" id="selectCategory">
 						<option value="" selected disabled="">Välj kategori</option>
-						<option value="restaurant">&#xf0f5; Restaurang</option>
-						<option value="hotel">&#xf236; Hotell </option>
-						<option value="shopping">&#xf07a; Affärer </option>
-						<option value="fun">&#xf000; Nöjen</option>
+						<option value="1">&#xf0f5; Restaurang</option>
+						<option value="2">&#xf236; Hotell </option>
+						<option value="3">&#xf07a; Affärer </option>
+						<option value="4">&#xf000; Nöjen</option>
 					</select><br/>
 					<input id="submitInfo" type="button" value="Lägg till Pin" name="addPin"/>
 				</form>
