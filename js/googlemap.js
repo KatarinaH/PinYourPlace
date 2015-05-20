@@ -55,7 +55,6 @@ $(document).ready(function() {
 	});
 
 	var marker = new google.maps.Marker({
-
 		map: map,
 		title: 'Extinguisher',
 		animation: google.maps.Animation.DROP,
