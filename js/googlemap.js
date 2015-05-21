@@ -95,23 +95,23 @@ $(document).ready(function() {
 		}, function( data ) {
 			if (data == 'success') {
 				$("#info").fadeOut();
+				// when complete
+			    var marker = new google.maps.Marker({
+			    	map: map,
+					animation: google.maps.Animation.DROP,
+					icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+			    });
+
+			    /*marker.infoWindow = new google.maps.infowindow(
+			    	title: $("#title").text();
+			    	content: $("#description").text();
+			    	//$("#title").text() + $("#address").text()+ $("#description").text());*/
+			    marker.setMap(map);  
+		    	
 			} else {
 				console.log("error");
 			}
 		});
-
-		$.post("db_connect.php", {data}, function(data) {
-		    // when complete
-		    var marker = new google.maps.Marker({
-		    	map: map,
-				animation: google.maps.Animation.DROP,
-				icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
-		    });
-		    marker.infoWindow = new google.maps.infowindow($("#title").text() + $("#address").text()+ $("#description").text());
-		    marker.setMap(map);  
-		    	
-		});
-
 	});
 
 
