@@ -6,13 +6,17 @@
 	$query = "SELECT * FROM pin";
 	$result = $dbc->query($query);
 	$stmt->prepare($query);
+	$stmt->execute();
+	$stmt->bind_result($id_pin, $lng, $lat, $title, $address, $description, $id_user, $id_category);
+	mysqli_stmt_fetch($stmt);
+
+	$ds = []; 
+	while( $row = $result->fetch_assoc() ) {
+		$ds[] = $row;
+	}
 
 
-	$result = mysqli_query($dbc, $query) 
-		or die("Error querying database.");
-
-
-	echo json_encode($query);
+	echo json_encode($ds);
 
 	/*if (mysqli_num_rows($result) > 0) { //Kollar om det finns något i databasen
 		echo "fail"; 	

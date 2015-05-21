@@ -77,6 +77,24 @@ $(document).ready(function() {
 		$('#lat').val(lat);
 	});
 
+
+	//gör en ajax call till getpin.php
+	//ta resultatet from getpin.php och gör en markör för varje json object
+
+	$.get("getpin.php", function(data){
+		console.log(data);
+		for (var i = 0; i < data.length; i++) {
+			
+			var marker = new google.maps.Marker({
+		    	map: map,
+		    	position: new google.maps.LatLng(lat, lng),
+				animation: google.maps.Animation.DROP,
+				icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+		    });
+		};
+	});
+
+
 	$("#submitInfo").on('click', function(){
 		var lng = $('#lng').val();
 		var lat = $('#lat').val();
