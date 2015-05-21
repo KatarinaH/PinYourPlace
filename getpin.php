@@ -3,7 +3,7 @@
 
 	$stmt = $dbc->stmt_init();
 
-	$query = "SELECT lng, lat FROM pin";
+	$query = "SELECT * FROM pin";
 	$result = $dbc->query($query);
 	$stmt->prepare($query);
 
