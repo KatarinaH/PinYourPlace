@@ -142,7 +142,7 @@ var infowindow;
 		    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
 		    	//console.log(this);
 		    	infowindow.setContent(this.content);
-				infowindow.open(map, marker);
+				infowindow.open(map, this);
 			});
 
 			
