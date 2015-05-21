@@ -1,7 +1,5 @@
 <?php 
 	
-
-
 	include "db_connect.php";
 
 		if(isset($_POST["title"])) { //om det finns något i titel
@@ -21,9 +19,5 @@
 			}
 
 		}//Stänger den första if satsen
-
-	//lägg in post arrayen i db.
-	//kolla ifall insättning lyckats (echo successs annars fail)
-	//I js kolla om data är succceeeccsssas dölj rutan annars fel
 	
 ?>
