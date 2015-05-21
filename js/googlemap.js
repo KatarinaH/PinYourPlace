@@ -126,10 +126,10 @@ var infowindow;
 					icon: 'http://i60.tinypic.com/23rnz20.png'
 			    });
 			}*/
-			console.log(data[i].id_category)
+			//console.log(data[i].id_category)
 
-			if (data[i].id_category == 1) {
-				var marker = new google.maps.Marker({
+
+			var marker = new google.maps.Marker({
 		    	map: map,
 		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
 		    	title: data[i].title,
@@ -137,28 +137,21 @@ var infowindow;
 				animation: google.maps.Animation.DROP,
 				icon: 'http://i61.tinypic.com/65tk4p.png'
 		    });
-			}
-
-			/*var marker = new google.maps.Marker({
-		    	map: map,
-		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
-		    	title: data[i].title,
-			    content: data[i].description,
-				animation: google.maps.Animation.DROP,
-				icon: 'http://i61.tinypic.com/65tk4p.png'
-		    });*/
 		    
 
-		    google.maps.event.addListener(marker, 'click', function(e){ //när man klickar på platsen syns en text
-		    	console.log(e.currentTarget);
-		    	infowindow.setContent(e.currentTarget.content);
+		    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
+		    	//console.log(this);
+		    	infowindow.setContent(this.content);
 				infowindow.open(map, marker);
 			});
+
+			
 		}
 		infowindow = new google.maps.InfoWindow({
 	    	title: '',
 	    	content: ''
 	    });
+		
 	});
 
 
