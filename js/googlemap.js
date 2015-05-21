@@ -3,7 +3,7 @@ $(document).ready(function() {
 	//Betsämmer vilken del av kartan man ska se.
 	var mapOptions = {
 		center: {lat: 59.346027, lng: 18.058272},
-		zoom: 15,
+		zoom: 14,
 		scrollwheel: false,
 		//disableDefaultUI: true
 		//disableDoubleClickZoom: true //Gör att man inte kan scrolla i kartan
@@ -82,7 +82,6 @@ $(document).ready(function() {
 		var address = $('#address').val();
 		var description = $('#description').val();
 		var category = $('#selectCategory option:selected').val();
-		//var category = $('#selectCategory option:selected').data('status');
 		
 		$.post( "savepin.php", {
 			'lng': lng,
