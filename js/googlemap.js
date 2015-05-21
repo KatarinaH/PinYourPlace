@@ -28,6 +28,8 @@ $(document).ready(function() {
 		mapOptions
 	);
 
+	//startPosition();
+
 	/* SEARCHBOX - NOT WORKING
 	// Create the search box and link it to the UI element.
   	var input = document.getElementById('pac-input');
@@ -51,7 +53,7 @@ $(document).ready(function() {
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
-	var infowindow = new google.maps.InfoWindow({
+	/*var infowindow = new google.maps.InfoWindow({
 	});
 
 	var marker = new google.maps.Marker({
@@ -63,13 +65,13 @@ $(document).ready(function() {
 
 	google.maps.event.addListener(marker, 'click', function(){
 		infowindow.open(map, marker);
-	});
+	});*/
 
 	google.maps.event.addListener(map, 'click', function(e){
 		var lat = e.latLng.A;
 		var lng = e.latLng.F;
 		
-		marker.setPosition(new google.maps.LatLng(lat, lng));
+		//marker.setPosition(new google.maps.LatLng(lat, lng));
 		$("#info").fadeIn();
 		$('#lng').val(lng);
 		$('#lat').val(lat);
@@ -97,7 +99,34 @@ $(document).ready(function() {
 				console.log("error");
 			}
 		});
+
+		$.post("db_connect.php", {data}, function(data) {
+		    // when complete
+		    var marker = new google.maps.Marker({
+		    	map: map,
+				animation: google.maps.Animation.DROP,
+				icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+		    });
+		    marker.infoWindow = new google.maps.infowindow($("#title").text() + $("#address").text()+ $("#description").text());
+		    marker.setMap(map);  
+		    	
+		});
+
 	});
 
 
 });
+
+/*function startPosition() {
+	var startPos;
+	var startLat;
+	var startLon
+	navigator.geolocation.getCurrentPosition(function(position) {
+	    startPos = position;
+	    startLat = startPos.coords.latitude;
+	   	startLon = startPos.coords.longitude;
+	});
+
+	// set current position as center
+    map.setCenter(new google.maps.LatLng(startLat,startLon));
+}*/
