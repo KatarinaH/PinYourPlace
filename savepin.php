@@ -4,7 +4,7 @@
 
 	include "db_connect.php";
 
-		if(isset($_POST["title"])) { //om man har klickat på "Lägg till Pin"
+		if(isset($_POST["title"])) { //om det finns något i titel
 			$lng = $_POST["lng"];
 			$lat = $_POST["lat"]; 
 		    $title = $_POST["title"];

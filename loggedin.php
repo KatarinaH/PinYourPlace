@@ -5,8 +5,6 @@ if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "TRUE";
 
 } else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
-
-} else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	// redan inloggad, allt ok
 
 } else {
@@ -15,6 +13,8 @@ if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "FALSE";
 	header("Location: index.php?not_set");
 }
+
+
 
 ?>
 
