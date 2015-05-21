@@ -1,5 +1,6 @@
-$(document).ready(function() {
 
+$(document).ready(function() {
+var infowindow;
 	//Betsämmer vilken del av kartan man ska se.
 	var mapOptions = {
 		center: {lat: 59.346027, lng: 18.058272},
@@ -82,16 +83,82 @@ $(document).ready(function() {
 	//ta resultatet from getpin.php och gör en markör för varje json object
 
 	$.get("getpin.php", function(data){
-		console.log(data);
-		for (var i = 0; i < data.length; i++) {
-			
-			var marker = new google.maps.Marker({
+		data = JSON.parse(data);
+		for(var i = 0; i < data.length; i++){
+			//icon bed - http://i61.tinypic.com/65tk4p.png
+			//icon cutlery - http://i59.tinypic.com/2mpbdco.png
+			//icon glass - http://i60.tinypic.com/23rnz20.png
+			//icon cart - http://i62.tinypic.com/nx86lj.png
+			/*if (data[i].id_category == 1) {
+				var marker = new google.maps.Marker({
+			    	map: map,
+			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+			    	title: data[i].title,
+				    content: data[i].description,
+					animation: google.maps.Animation.DROP,
+					icon: 'http://i59.tinypic.com/2mpbdco.png'
+			    });
+			} else if (data[i].id_category == 2) {
+				var marker = new google.maps.Marker({
+			    	map: map,
+			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+			    	title: data[i].title,
+				    content: data[i].description,
+					animation: google.maps.Animation.DROP,
+					icon: 'http://i61.tinypic.com/65tk4p.png'
+			    });
+			} else if (data[i].id_category == 3) {
+				var marker = new google.maps.Marker({
+			    	map: map,
+			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+			    	title: data[i].title,
+				    content: data[i].description,
+					animation: google.maps.Animation.DROP,
+					icon: 'http://i62.tinypic.com/nx86lj.png'
+			    });
+			} else if (data[i].id_category == 4) {
+				var marker = new google.maps.Marker({
+			    	map: map,
+			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+			    	title: data[i].title,
+				    content: data[i].description,
+					animation: google.maps.Animation.DROP,
+					icon: 'http://i60.tinypic.com/23rnz20.png'
+			    });
+			}*/
+			console.log(data[i].id_category)
+
+			if (data[i].id_category == 1) {
+				var marker = new google.maps.Marker({
 		    	map: map,
-		    	position: new google.maps.LatLng(lat, lng),
+		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+		    	title: data[i].title,
+			    content: data[i].description,
 				animation: google.maps.Animation.DROP,
-				icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+				icon: 'http://i61.tinypic.com/65tk4p.png'
 		    });
-		};
+			}
+
+			/*var marker = new google.maps.Marker({
+		    	map: map,
+		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
+		    	title: data[i].title,
+			    content: data[i].description,
+				animation: google.maps.Animation.DROP,
+				icon: 'http://i61.tinypic.com/65tk4p.png'
+		    });*/
+		    
+
+		    google.maps.event.addListener(marker, 'click', function(e){ //när man klickar på platsen syns en text
+		    	console.log(e.currentTarget);
+		    	infowindow.setContent(e.currentTarget.content);
+				infowindow.open(map, marker);
+			});
+		}
+		infowindow = new google.maps.InfoWindow({
+	    	title: '',
+	    	content: ''
+	    });
 	});
 
 
@@ -122,11 +189,14 @@ $(document).ready(function() {
 					icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
 			    });
 
-			    /*marker.infoWindow = new google.maps.infowindow(
-			    	title: $("#title").text();
-			    	content: $("#description").text();
-			    	//$("#title").text() + $("#address").text()+ $("#description").text());*/
-			    marker.setMap(map);  
+			    var infowindow = new google.maps.InfoWindow({
+			    	title: title,
+			    	content: description
+			    });
+
+			    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
+					infowindow.open(map, marker);
+				}); 
 		    	
 			} else {
 				console.log("error");
