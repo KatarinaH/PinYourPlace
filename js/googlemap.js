@@ -98,6 +98,8 @@ $(document).ready(function() {
 				// when complete
 			    var marker = new google.maps.Marker({
 			    	map: map,
+			    	position: new google.maps.LatLng(lat, lng),
+			    	title: title,
 					animation: google.maps.Animation.DROP,
 					icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
 			    });
