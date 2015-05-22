@@ -13,9 +13,6 @@ if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "FALSE";
 	header("Location: index.php?not_set");
 }
-
-
-
 ?>
 
 	<script 
