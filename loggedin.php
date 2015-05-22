@@ -53,7 +53,7 @@ if(isset($_POST["login"])){
 		<div id="content_map">
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
 			<div id="info">
-				<form method="post">
+				<form id="createPin" method="post">
 					<input type="text" id="lng" name="lng"/><br/>
 					<input type="text" id="lat" name="lat"/><br/>
 					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>

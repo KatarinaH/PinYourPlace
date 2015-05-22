@@ -132,9 +132,9 @@ var infowindow;
 		}, function( data ) {
 			if (data == 'success') {
 				$("#info").fadeOut();
-				// when complete
-
-				var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ];
+				document.getElementById("createPin").reset(); //Tömmer formuläret
+				
+				var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ]; //Array med pin ikoner
 
 			    var marker = new google.maps.Marker({
 			    	map: map,
