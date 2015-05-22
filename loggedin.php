@@ -13,6 +13,12 @@ if(isset($_POST["login"])){
 	$_SESSION["logged_in"] = "FALSE";
 	header("Location: index.php?not_set");
 }
+
+if(isset($_GET["empty"])){ //om man inte fyller i alla fält när man skapar ny pin 
+	$empty = "<p class='error'>Du måste fylla i alla fält</p>";
+} else {
+	$empty = "";
+}
 ?>
 
 	<script 
@@ -49,6 +55,7 @@ if(isset($_POST["login"])){
 	<div id="wrapper_map">
 		<div id="content_map">
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
+			<?php echo "<p> $empty </p>"; ?>
 			<div id="info">
 				<form id="createPin" method="post">
 					<input type="text" id="lng" name="lng"/><br/>

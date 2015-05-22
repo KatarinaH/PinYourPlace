@@ -29,12 +29,12 @@ var infowindow;
 		mapOptions
 	);
 
-	    var coords = new google.maps.LatLng(
+	/*coords = new google.maps.LatLng(
         position.coords.latitude,
         position.coords.longitude
     );
 
-    map.setCenter(coords);
+    map.setCenter(coords);*/
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
