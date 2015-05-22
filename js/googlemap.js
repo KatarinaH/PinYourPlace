@@ -29,6 +29,12 @@ var infowindow;
 		mapOptions
 	);
 
+	    var coords = new google.maps.LatLng(
+        position.coords.latitude,
+        position.coords.longitude
+    );
+
+    map.setCenter(coords);
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
@@ -93,13 +99,6 @@ var infowindow;
     			}
     		};
 
-			/*var className = $(this).attr('class');
-			console.log(className);
-			if(className == data.id_category){
-				$(this).fadeIn();
-			}else {
-				$(".menu ul li").fadeOut();
-			}*/
 		});
 
 	    
@@ -156,4 +155,9 @@ var infowindow;
 
 
 });
+
+
+
+
+
 
