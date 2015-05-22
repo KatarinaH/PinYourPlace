@@ -136,7 +136,7 @@ var infowindow;
 					content: contentString
 			    });
 
-			    var contentString = '<div id="pinInfo"><h1>' + title + '</h1><p>' + address + '</p><p>' + description + '</p>';
+			    var contentString = '<div id="pinInfo"><h2>' + title + '</h2><p>Adress: ' + address + '</p><p>Beskrivning: ' + description + '</p>';
 
 			    var infowindow = new google.maps.InfoWindow({
 			    	content: contentString
