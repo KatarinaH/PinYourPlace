@@ -93,7 +93,7 @@ var infowindow;
 		    	map: map,
 		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
 		    	title: data[i].title,
-			    content: '<div id="pinInfo"><h1>' + data[i].title + '</h1><p>' + data[i].address + '</p><p>' + data[i].description + '</p>',
+			    content: '<div id="pinInfo"><h2>' + data[i].title + '</h2><p>Adress: ' + data[i].address + '</p><p>Beskrivning: ' + data[i].description + '</p>',
 				animation: google.maps.Animation.DROP,
 				icon: images[data[i].id_category - 1]
 		    });
