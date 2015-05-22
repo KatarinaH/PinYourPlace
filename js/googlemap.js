@@ -85,57 +85,16 @@ var infowindow;
 	$.get("getpin.php", function(data){
 		data = JSON.parse(data);
 		for(var i = 0; i < data.length; i++){
-			//icon bed - http://i61.tinypic.com/65tk4p.png
-			//icon cutlery - http://i59.tinypic.com/2mpbdco.png
-			//icon glass - http://i60.tinypic.com/23rnz20.png
-			//icon cart - http://i62.tinypic.com/nx86lj.png
-			/*if (data[i].id_category == 1) {
-				var marker = new google.maps.Marker({
-			    	map: map,
-			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
-			    	title: data[i].title,
-				    content: data[i].description,
-					animation: google.maps.Animation.DROP,
-					icon: 'http://i59.tinypic.com/2mpbdco.png'
-			    });
-			} else if (data[i].id_category == 2) {
-				var marker = new google.maps.Marker({
-			    	map: map,
-			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
-			    	title: data[i].title,
-				    content: data[i].description,
-					animation: google.maps.Animation.DROP,
-					icon: 'http://i61.tinypic.com/65tk4p.png'
-			    });
-			} else if (data[i].id_category == 3) {
-				var marker = new google.maps.Marker({
-			    	map: map,
-			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
-			    	title: data[i].title,
-				    content: data[i].description,
-					animation: google.maps.Animation.DROP,
-					icon: 'http://i62.tinypic.com/nx86lj.png'
-			    });
-			} else if (data[i].id_category == 4) {
-				var marker = new google.maps.Marker({
-			    	map: map,
-			    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
-			    	title: data[i].title,
-				    content: data[i].description,
-					animation: google.maps.Animation.DROP,
-					icon: 'http://i60.tinypic.com/23rnz20.png'
-			    });
-			}*/
-			//console.log(data[i].id_category)
 
-
+			var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ];
+			
 			var marker = new google.maps.Marker({
 		    	map: map,
 		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
 		    	title: data[i].title,
 			    content: data[i].description,
 				animation: google.maps.Animation.DROP,
-				icon: 'http://i61.tinypic.com/65tk4p.png'
+				icon: images[data[i].id_category - 1]
 		    });
 		    
 
@@ -174,12 +133,15 @@ var infowindow;
 			if (data == 'success') {
 				$("#info").fadeOut();
 				// when complete
+
+				var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ];
+
 			    var marker = new google.maps.Marker({
 			    	map: map,
 			    	position: new google.maps.LatLng(lat, lng),
 			    	title: title,
 					animation: google.maps.Animation.DROP,
-					icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
+					icon: images[category - 1]
 			    });
 
 			    var infowindow = new google.maps.InfoWindow({
