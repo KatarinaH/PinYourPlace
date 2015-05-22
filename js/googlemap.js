@@ -88,28 +88,28 @@ var infowindow;
 
 			var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ];
 			
+
 			var marker = new google.maps.Marker({
 		    	map: map,
 		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
 		    	title: data[i].title,
-			    content: data[i].description,
+			    content: '<div id="pinInfo"><h1>' + data[i].title + '</h1><p>' + data[i].address + '</p><p>' + data[i].description + '</p>',
 				animation: google.maps.Animation.DROP,
 				icon: images[data[i].id_category - 1]
 		    });
 		    
-
 		    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
-		    	//console.log(this);
 		    	infowindow.setContent(this.content);
 				infowindow.open(map, this);
 			});
 
 			
 		}
-		infowindow = new google.maps.InfoWindow({
-	    	title: '',
-	    	content: ''
+		
+		var infowindow = new google.maps.InfoWindow({
+	    	content: ""
 	    });
+	    
 		
 	});
 
@@ -135,18 +135,19 @@ var infowindow;
 				document.getElementById("createPin").reset(); //Tömmer formuläret
 				
 				var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ]; //Array med pin ikoner
-
 			    var marker = new google.maps.Marker({
 			    	map: map,
 			    	position: new google.maps.LatLng(lat, lng),
 			    	title: title,
 					animation: google.maps.Animation.DROP,
-					icon: images[category - 1]
+					icon: images[category - 1],
+					content: contentString
 			    });
 
+			    var contentString = '<div id="pinInfo"><h1>' + title + '</h1><p>' + address + '</p><p>' + description + '</p>';
+
 			    var infowindow = new google.maps.InfoWindow({
-			    	title: title,
-			    	content: description
+			    	content: contentString
 			    });
 
 			    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
