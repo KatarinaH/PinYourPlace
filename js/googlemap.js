@@ -1,4 +1,4 @@
-
+var markers = [];
 $(document).ready(function() {
 var infowindow;
 	//Betsämmer vilken del av kartan man ska se.
@@ -29,44 +29,9 @@ var infowindow;
 		mapOptions
 	);
 
-	//startPosition();
-
-	/* SEARCHBOX - NOT WORKING
-	// Create the search box and link it to the UI element.
-  	var input = document.getElementById('pac-input');
- 	map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
- 	var searchBox = new google.maps.places.SearchBox(input);
-
-	// Listen for the event fired when the user selects an item from the
-	// pick list. Retrieve the matching places for that item.
-	google.maps.event.addListener(searchBox, 'places_changed', function() {
-		var places = searchBox.getPlaces();
-
-	    if (places.length == 0) {
-	      return;
-	    }
-	    for (var i = 0, marker; marker = markers[i]; i++) {
-	      marker.setMap(null);
-	    }
-	});
-	*/
 
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
-	/*var infowindow = new google.maps.InfoWindow({
-	});
-
-	var marker = new google.maps.Marker({
-		map: map,
-		title: 'Extinguisher',
-		animation: google.maps.Animation.DROP,
-		icon: 'http://iconshow.me/media/images/Mixed/Free-Flat-UI-Icons/png/20/heart-24-20.png'
-	});
-
-	google.maps.event.addListener(marker, 'click', function(){
-		infowindow.open(map, marker);
-	});*/
 
 	google.maps.event.addListener(map, 'click', function(e){
 		var lat = e.latLng.A;
@@ -95,13 +60,18 @@ var infowindow;
 		    	title: data[i].title,
 			    content: '<div id="pinInfo"><h2>' + data[i].title + '</h2><p>Adress: ' + data[i].address + '</p><p>Beskrivning: ' + data[i].description + '</p>',
 				animation: google.maps.Animation.DROP,
-				icon: images[data[i].id_category - 1]
+				icon: images[data[i].id_category - 1],
+				category: data[i].id_category
 		    });
 		    
+		    markers.push(marker);
+
 		    google.maps.event.addListener(marker, 'click', function(){ //när man klickar på platsen syns en text
 		    	infowindow.setContent(this.content);
 				infowindow.open(map, this);
 			});
+
+			
 
 			
 		}
@@ -109,6 +79,29 @@ var infowindow;
 		var infowindow = new google.maps.InfoWindow({
 	    	content: ""
 	    });
+
+    	$(".menu ul li").on("click", function(){
+    		var className = $(this).attr('class');
+    		for (var i = 0; i < markers.length; i++) {
+    			if(className == "all") {
+    				markers[i].setMap(map);
+    			}
+    			else if(markers[i].category == className) {
+    				markers[i].setMap(map);
+    			} else {
+    				markers[i].setMap(null);
+    			}
+    		};
+
+			/*var className = $(this).attr('class');
+			console.log(className);
+			if(className == data.id_category){
+				$(this).fadeIn();
+			}else {
+				$(".menu ul li").fadeOut();
+			}*/
+		});
+
 	    
 		
 	});
@@ -161,18 +154,6 @@ var infowindow;
 	});
 
 
+
 });
 
-/*function startPosition() {
-	var startPos;
-	var startLat;
-	var startLon
-	navigator.geolocation.getCurrentPosition(function(position) {
-	    startPos = position;
-	    startLat = startPos.coords.latitude;
-	   	startLon = startPos.coords.longitude;
-	});
-
-	// set current position as center
-    map.setCenter(new google.maps.LatLng(startLat,startLon));
-}*/

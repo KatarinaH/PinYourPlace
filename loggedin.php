@@ -24,13 +24,13 @@ if(isset($_POST["login"])){
 	</script>
 	<div class="mobile_menu">
 		<i class="fa fa-bars"></i>
-		<div id="menu_content">
+		<div id="menu_content" class="menu">
 			<ul>
-				<li> Alla <i class="fa fa-globe"></i></li>
-				<li> Restauranger <i class="fa fa-cutlery"></i></li>
-				<li> Hotell <i class="fa fa-bed"></i></li>
-				<li> Affärer <i class="fa fa-shopping-cart"></i></li>
-				<li> Nöjen <i class="fa fa-glass"></i></li>
+				<li class="all"> Alla <i class="fa fa-globe"></i></li>
+				<li class="1"> Restauranger <i class="fa fa-cutlery"></i></li>
+				<li class="2"> Hotell <i class="fa fa-bed"></i></li>
+				<li class="3"> Affärer <i class="fa fa-shopping-cart"></i></li>
+				<li class="4"> Nöjen <i class="fa fa-glass"></i></li>
 				<li><a href="index.php?loggedout">Logga ut <i class="fa fa-sign-out"></i></a></li>
 			</ul>
 		</div>
@@ -38,13 +38,13 @@ if(isset($_POST["login"])){
 	<div class="clearfix"></div>
 
 	<div class="desktop_menu">
-		<div id="menu_content_descktop">
+		<div id="menu_content_descktop" class="menu">
 			<ul>
-				<li><i class="fa fa-globe"></i> Alla </li>
-				<li><i class="fa fa-cutlery"></i> Restauranger </li>
-				<li><i class="fa fa-bed"></i> Hotell </li>
-				<li><i class="fa fa-shopping-cart"></i> Affärer </li>
-				<li><i class="fa fa-glass"></i> Nöjen </li>
+				<li class="all"><i class="fa fa-globe"></i> Alla </li>
+				<li class="1"><i class="fa fa-cutlery"></i> Restauranger </li>
+				<li class="2"><i class="fa fa-bed"></i> Hotell </li>
+				<li class="3"><i class="fa fa-shopping-cart"></i> Affärer </li>
+				<li class="4"><i class="fa fa-glass"></i> Nöjen </li>
 				<li><a href="index.php?loggedout"><i class="fa fa-sign-out"></i>Logga ut </a></li>
 			</ul>
 		</div>
