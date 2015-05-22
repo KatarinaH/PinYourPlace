@@ -18,4 +18,7 @@ $(document).ready(function() {
 	$('.mobile_menu .fa-bars').on('click', function(){
 		$('#menu_content').slideToggle('slow');
 	});
+	$('.mobile_menu ul li').on('click', function(){
+		$('#menu_content').slideToggle('slow');
+	});
 });
