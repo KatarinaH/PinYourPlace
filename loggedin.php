@@ -14,7 +14,6 @@ if(isset($_POST["login"])){
 	header("Location: index.php?not_set");
 }
 ?>
-
 	<script 
 	type="text/javascript" 
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGIgmodIPp6-FkD_YsPkwR8V3_VqCi4Ac">

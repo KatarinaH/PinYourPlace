@@ -1,4 +1,9 @@
 <?php	
+/*define("DB_HOST", "pinyourplace-202424.mysql.binero.se"); 
+define("DB_USER", "202424_jj68643");
+define("DB_PASS", "Fritte92");
+define("DB_NAME", "pinyourplace");*/
+
 define("DB_HOST", "localhost"); 
 define("DB_USER", "root");
 define("DB_PASS", "");

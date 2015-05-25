@@ -1,17 +1,22 @@
 var markers = [];
 $(document).ready(function() {
-var infowindow;
+	var infowindow;
+
+	//Centrerar kartan beroende på vart man är 
+    navigator.geolocation.getCurrentPosition(function(position) {
+      initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      map.setCenter(initialLocation);
+    });
+  	
 	//Betsämmer vilken del av kartan man ska se.
 	var mapOptions = {
-		center: {lat: 59.346027, lng: 18.058272},
+		//center: {lat: 59.346027, lng: 18.058272},
 		zoom: 14,
 		scrollwheel: false,
-		//disableDefaultUI: true
-		//disableDoubleClickZoom: true //Gör att man inte kan scrolla i kartan
-		//draggable: false //Gör att man inte kan dra och flytta kartan.
 	};
 
-	var mapStyle = [{ //Stylar kartan svartvit
+	//Styling kartan
+	var mapStyle = [{
 		featureType: 'all',
 		elementType: 'geometry',
 		stylers: [
@@ -19,7 +24,6 @@ var infowindow;
 			{ saturation: 100 }, //-100 är svartvitt
 			{ gamma: 0.76 },
 			{ visibility: 'on' }
-			//{ hue: '#ff00ff'}
 		]
 	}];
 
@@ -29,9 +33,7 @@ var infowindow;
 		mapOptions
 	);
 
-
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
-
 
 	google.maps.event.addListener(map, 'click', function(e){
 		var lat = e.latLng.A;
@@ -43,17 +45,15 @@ var infowindow;
 		$('#lat').val(lat);
 	});
 
-
-	//gör en ajax call till getpin.php
-	//ta resultatet from getpin.php och gör en markör för varje json object
-
+	//Gör en ajax call till getpin.php och tar resultatet från getpin.php och gör en markör för varje json object
 	$.get("getpin.php", function(data){
 		data = JSON.parse(data);
 		for(var i = 0; i < data.length; i++){
 
+			//Skapar en array där vi hämtar ut alla ikoner
 			var images = ["img/cutlery.png", "img/bed.png", "img/cart.png", "img/glass.png" ];
-			
 
+			//Hämtar ut alla pins från databasen och kopplar ihop dem med rätt ikon, title, address och description
 			var marker = new google.maps.Marker({
 		    	map: map,
 		    	position: new google.maps.LatLng(data[i].lat, data[i].lng),
@@ -70,16 +70,13 @@ var infowindow;
 		    	infowindow.setContent(this.content);
 				infowindow.open(map, this);
 			});
-
-			
-
-			
 		}
 		
 		var infowindow = new google.maps.InfoWindow({
 	    	content: ""
 	    });
 
+		//Sorterar pins beoende på vilken kategori man har klickat på 
     	$(".menu ul li").on("click", function(){
     		var className = $(this).attr('class');
     		for (var i = 0; i < markers.length; i++) {
@@ -92,21 +89,10 @@ var infowindow;
     				markers[i].setMap(null);
     			}
     		};
-
-			/*var className = $(this).attr('class');
-			console.log(className);
-			if(className == data.id_category){
-				$(this).fadeIn();
-			}else {
-				$(".menu ul li").fadeOut();
-			}*/
 		});
-
-	    
-		
 	});
 
-
+	//När man har klickat på submit-knappen sparas värdet i input-fälten i variabler
 	$("#submitInfo").on('click', function(){
 		var lng = $('#lng').val();
 		var lat = $('#lat').val();
@@ -152,8 +138,5 @@ var infowindow;
 			}
 		});
 	});
-
-
-
 });
 
