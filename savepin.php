@@ -2,7 +2,9 @@
 	
 	include "db_connect.php";
 
-		if(isset($_POST["title"])) { //om det finns något i titel
+		if(empty($_POST["title"]) || empty($_POST["address"]) || empty($_POST["description"]) || empty($_POST["category"])) { //om någon input ej är ifylld
+			header("Location: loggedin.php?empty") ;
+		} else {
 			$lng = $_POST["lng"];
 			$lat = $_POST["lat"]; 
 		    $title = $_POST["title"];

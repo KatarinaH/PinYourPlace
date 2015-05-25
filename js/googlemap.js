@@ -33,6 +33,16 @@ $(document).ready(function() {
 		mapOptions
 	);
 
+<<<<<<< HEAD
+=======
+	/*coords = new google.maps.LatLng(
+        position.coords.latitude,
+        position.coords.longitude
+    );
+
+    map.setCenter(coords);*/
+
+>>>>>>> origin/master
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
 	google.maps.event.addListener(map, 'click', function(e){
@@ -89,6 +99,10 @@ $(document).ready(function() {
     				markers[i].setMap(null);
     			}
     		};
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 		});
 	});
 
@@ -123,7 +137,7 @@ $(document).ready(function() {
 					content: contentString
 			    });
 
-			    var contentString = '<div id="pinInfo"><h1>' + title + '</h1><p>' + address + '</p><p>' + description + '</p>';
+			    var contentString = '<div id="pinInfo"><h2>' + title + '</h2><p>Adress: ' + address + '</p><p>Beskrivning: ' + description + '</p>';
 
 			    var infowindow = new google.maps.InfoWindow({
 			    	content: contentString
@@ -139,4 +153,9 @@ $(document).ready(function() {
 		});
 	});
 });
+
+
+
+
+
 
