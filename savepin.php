@@ -1,5 +1,4 @@
 <?php 
-	
 	include "db_connect.php";
 
 		if(empty($_POST["title"]) || empty($_POST["address"]) || empty($_POST["description"]) || empty($_POST["category"])) { //om någon input ej är ifylld
@@ -19,7 +18,5 @@
 			} else {
 				echo "fail";
 			}
-
 		}//Stänger den första if satsen
-	
 ?>

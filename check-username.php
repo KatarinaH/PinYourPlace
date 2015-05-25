@@ -9,7 +9,6 @@
 	$result = $dbc->query($query);
 	$stmt->prepare($query);
 
-
 	$result = mysqli_query($dbc, $query) 
 		or die("Error querying database.");
 

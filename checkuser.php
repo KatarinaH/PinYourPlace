@@ -14,7 +14,6 @@
 		$result = mysqli_query($dbc, $query) 
 		or die("Error querying database.");
 
-
 		if (mysqli_num_rows($result) == 1) { //Kollar om det finns någon användare med det användarnamnet.
 			$_SESSION["logged_in"] = TRUE; //Finns användaren sätts sessionsvariabeln logged_in till TRUE
 			
@@ -26,12 +25,9 @@
 			
 			$result = mysqli_query($dbc, $query); //stämmer allt skickas man vidare som inloggad till dashboard.php
 			header("Location: loggedin.php");
-
-
+			
 		} else {
 			header("Location: index.php?unknown"); //stämmer de inte visas ett felmeddelande och en är fortfarande kvar på index.php
 		}
-
 	}
-
 ?>

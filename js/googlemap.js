@@ -33,16 +33,6 @@ $(document).ready(function() {
 		mapOptions
 	);
 
-<<<<<<< HEAD
-=======
-	/*coords = new google.maps.LatLng(
-        position.coords.latitude,
-        position.coords.longitude
-    );
-
-    map.setCenter(coords);*/
-
->>>>>>> origin/master
 	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
 
 	google.maps.event.addListener(map, 'click', function(e){
@@ -99,10 +89,6 @@ $(document).ready(function() {
     				markers[i].setMap(null);
     			}
     		};
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 		});
 	});
 

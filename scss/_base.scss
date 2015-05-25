@@ -14,9 +14,10 @@ body {
 .clearfix{
 	clear: both;
 }
-
-
-#startpage, #content_map {
+/**************************************************************/
+/***************************INDEX******************************/
+/**************************************************************/
+#startpage, #content_map, #registrate {
 	background-color: rgba(250,250,250,.7);
 	display: block;
 	font-family: "Neucha";
@@ -24,20 +25,16 @@ body {
 	text-align: center;
 }
 
-#startpage {
+#startpage, #registrate{
 	padding: 20px;
 	width: 80%;
 	input {
 		margin-bottom: 20px;
 	}
 }
-
-
 /**************************************************************/
 /*************************LOGO MENU****************************/
 /**************************************************************/
-
-
 #logo {
 	padding: 10px;
 	img {
@@ -47,20 +44,22 @@ body {
 	}
 }
 
-
 .desktop_menu {
 	display: none;
 }
+
 .mobile_menu {
+	left: 6%;
 	position: absolute;
 	top: 6%;
-	left: 6%;
 	width: 90%;
 	z-index: 1;
 	.fa-bars{
-		font-size: 2em;
 		color: #EB3B83;
+		cursor: pointer;
+		font-size: 2em;
 	}
+
 	#menu_content {
 		background-color: rgba(0,0,0,.9);
 		border-radius: 10px;
@@ -72,8 +71,8 @@ body {
 		ul {
 			list-style-type: none;
 			width: 100%;
-
 			li {
+				cursor: pointer;
 				display: block;
 				margin-top: 2%;
 				text-transform: uppercase;
@@ -87,14 +86,9 @@ body {
 		}	
 	}	
 }
-
 /**************************************************************/
 /**************************LOGGEDIN****************************/
 /**************************************************************/
-
-
-
-
 #wrapper_map {
 	#content_map {
 	height: auto;
@@ -107,7 +101,6 @@ body {
 			margin-top: 30px;
 			width: 300px;
 		}
-
 		#new_pin {
 			display: block;
 			margin: 0 auto;
@@ -116,29 +109,21 @@ body {
 	}
 }
 
-#registrate{
-	background-color: rgba(250,250,250,.7);
-	height: 70vh;
-	margin: 0 auto;	
-	width: 300px;
-
-	form{
-		
-		input{
-			margin: 3%;	
-		}
-	}	
-}
-
 #info {
 	display: none;
-	form {
-		input {
-			margin: 3%;
-			width: 200px;
-		}
-		select {
-			font-family: "FontAwesome", arial;
-		}
+	font-family: "Neucha";
+	margin: 0 auto;
+	padding: 20px;
+	text-align: center;
+	width: 80%;
+	input, textarea, select {
+		margin-bottom: 20px;
+	}
+	select {
+		font-family: "FontAwesome", arial;
 	}
 }
+
+
+
+

@@ -8,13 +8,13 @@ if(isset($_POST["login"])){
 	// redan inloggad, allt ok
 
 } else {
-	// försöker komma åt sidan utan att vara inloggad
-	// skicka till login-sidan
+	// Om man försöker komma åt sidan utan att vara inloggad skickas man till index.php
 	$_SESSION["logged_in"] = "FALSE";
 	header("Location: index.php?not_set");
 }
 
-if(isset($_GET["empty"])){ //om man inte fyller i alla fält när man skapar ny pin 
+//om man inte fyller i alla fält när man skapar ny pin
+if(isset($_GET["empty"])){  
 	$empty = "<p class='error'>Du måste fylla i alla fält</p>";
 } else {
 	$empty = "";
@@ -24,6 +24,7 @@ if(isset($_GET["empty"])){ //om man inte fyller i alla fält när man skapar ny 
 	type="text/javascript" 
 	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBGIgmodIPp6-FkD_YsPkwR8V3_VqCi4Ac">
 	</script>
+
 	<div class="mobile_menu">
 		<i class="fa fa-bars"></i>
 		<div id="menu_content" class="menu">
@@ -51,6 +52,7 @@ if(isset($_GET["empty"])){ //om man inte fyller i alla fält när man skapar ny 
 			</ul>
 		</div>
 	</div>
+
 	<div id="wrapper_map">
 		<div id="content_map">
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
@@ -72,12 +74,8 @@ if(isset($_GET["empty"])){ //om man inte fyller i alla fält när man skapar ny 
 					<input id="submitInfo" type="button" value="Lägg till Pin" name="addPin"/>
 				</form>
 			</div>
-			<!--<input id="pac-input" class="controls" type="text" placeholder="Search Box">-->
 			<div id="map"></div>
 		</div>
-
-
-
 	</div>
 
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

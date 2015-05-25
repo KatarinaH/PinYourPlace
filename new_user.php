@@ -1,7 +1,8 @@
 <?php 
 	include "header.php"; 
 	
-	if(isset($_GET["not_set2"])){ //om man försöker gå in på map.php inloggad 
+	//om man försöker gå in på loggedin.php inloggad 
+	if(isset($_GET["not_set2"])){ 
 		$not_set2_msg = "<p class='error'>Du måste fylla i alla fält!</p>";
 	} else {
 		$not_set2_msg = "";
@@ -11,7 +12,6 @@
 
 ?>
 <div id="wrapper_register">	
-	
 	<div id="registrate">
 		<h2>Registrera dig här </h2>
 		<form method="post" action="">
@@ -20,9 +20,7 @@
 			<input type="email" id="contact_email" name="email" placeholder="Email"/><br/>
 			<input type="text" id="username" name="username" placeholder="Användarnamn"/><span id="feedback"></span><br/>
 			<input type="password" id="password" name="password" placeholder="Lösenord"/><br/>
-
 			<input type="submit" value="Registrera dig!" name="reg" id="reg-btn">
-
 		</form>
 	</div>
 </div>
@@ -50,10 +48,8 @@
 				} else {
 					echo "Kontrollera att din emailadress är rätt";	
 				}
-
 			} 
 		}//Stänger den första if satsen
-
 	?>
 
 <?php include "footer.php"; ?>

@@ -15,13 +15,5 @@
 		$ds[] = $row;
 	}
 
-
-	echo json_encode($ds);
-
-	/*if (mysqli_num_rows($result) > 0) { //Kollar om det finns något i databasen
-		echo "fail"; 	
-	}else {
-		echo "fail";
-	}*/
-
+	echo json_encode($ds); //Gör om resultatet vi hämtar i databasen till en JSON-string
 ?>
