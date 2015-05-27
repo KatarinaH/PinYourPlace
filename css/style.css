@@ -456,11 +456,12 @@ body {
 #wrapper_map #content_map {
   height: auto;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 5px;
   width: 100%; }
   #wrapper_map #content_map #map {
     height: 70vh;
     margin: 0 auto;
+    margin-bottom: 30px;
     margin-top: 30px;
     width: 90%; }
   #wrapper_map #content_map #new_pin {
