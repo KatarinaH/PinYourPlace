@@ -8,7 +8,7 @@ $(document).ready(function() {
 		$.post("check-username.php", {name: $("#username").val()}).done(function(data){
 			console.log(data);
 			if(data == "success") {
-				$("#feedback").html("Användarnamnet är ledigt!");
+				$("#feedback").html("");
 			}else {
 				$("#feedback").html("Användarnamnet är upptaget");
 			}

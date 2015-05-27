@@ -18,7 +18,8 @@
 			<input type="text" id="contact_name" name="fname" placeholder="Förnamn"/><br/>
 			<input type="text" id="contact_lname" name="lname" placeholder="Efternamn"/><br/>
 			<input type="email" id="contact_email" name="email" placeholder="Email"/><br/>
-			<input type="text" id="username" name="username" placeholder="Användarnamn"/><span id="feedback"></span><br/>
+			<span id="feedback"></span><br/>
+			<input type="text" id="username" name="username" placeholder="Användarnamn"/><br/>
 			<input type="password" id="password" name="password" placeholder="Lösenord"/><br/>
 			<input type="submit" value="Registrera dig!" name="reg" id="reg-btn">
 		</form>
@@ -45,7 +46,9 @@
 				if(preg_match( $regex, $email )!=0) {
 					mysqli_query($dbc, $query = "INSERT INTO user (fname, lname, email, username, password ) VALUES ('$fname', '$lname','$email', '$username', '$password')");
 					
-					header("Location: index.php?succeed_reg");
+					$_SESSION["logged_in"] = "TRUE";
+					header("Location: loggedin.php");
+
 				} else {
 					echo "Kontrollera att din emailadress är rätt";	
 				}

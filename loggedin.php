@@ -2,7 +2,7 @@
 include "header.php"; 
 
 if(isset($_POST["login"])){
-	$_SESSION["logged_in"] = "TRUE";
+	$_SESSION["logged_in"] = "TRUE"; 
 
 } else if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	// redan inloggad, allt ok

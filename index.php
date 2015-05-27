@@ -23,13 +23,6 @@ if(isset($_GET["unknown"])){
 	$error_msg = "";
 }
 
-//Om registrering av ny användare lyckas
-if(isset($_GET["succeed_reg"])){ 
-	$succeed_reg = "<p class='succeed'>Tack för din registrering!</p>";
-} else {
-	$succeed_reg = "";
-}
-
 //Om man försöker gå in på index.php och man redan är inloggad skickas man till loggedin.php
 if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 	header("Location: loggedin.php");
@@ -43,7 +36,7 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 		?>
 
 		<h2>Logga in</h2>	
-		<?php echo "<p> $succeed_reg </p>";?>
+		
 			
 		<!--Formulär där användaren kan logga in-->
 		<form class="form" method="post" action="checkuser.php">
