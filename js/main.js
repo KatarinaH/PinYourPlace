@@ -26,4 +26,8 @@ $(document).ready(function() {
 		console.log("hej");
 		$('.info_text').slideToggle('slow');
 	});
+
+	$('#cancel').on('click', function(){
+		$("#info").slideToggle('slow');
+	});
 });
