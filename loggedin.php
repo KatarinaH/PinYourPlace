@@ -57,6 +57,7 @@ if(isset($_GET["empty"])){
 
 	<div id="wrapper_info">
 		<div class="info_text">
+			<i class="fa fa-times"></i>
 			<h2>Info</h2>
 			<p>PinYourPlace är en tjänst för att spara platser som man har besökt och som man vill minnas för sig själv och tipsa andra om. På så sätt har du alltid ett tips på en bra restaurang, ett trevligt hotell, bra shoppingplatser och roliga nöjen. Det är inte svårare än så, klicka på kartan där du har ett tips och börja pinna!</p>
 		</div>
