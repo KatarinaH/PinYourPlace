@@ -71,7 +71,8 @@ if(isset($_GET["empty"])){
 						<option value="3">&#xf07a; Affärer </option>
 						<option value="4">&#xf000; Nöjen</option>
 					</select><br/>
-					<input id="submitInfo" type="button" value="Lägg till Pin" name="addPin"/>
+					<input id="submitInfo" type="button" value="Lägg till Pin" name="addPin"/></br>
+					<input id="cancel" type="button" value="Avbryt" name="cancel"/>
 				</form>
 			</div>
 			<div id="map"></div>

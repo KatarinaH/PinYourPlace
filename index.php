@@ -48,11 +48,12 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 		<!--Formulär där användaren kan logga in-->
 		<form method="post" action="checkuser.php">
 			<label>Användarnamn:</label> <br/> <input class="cell" type="text" name="username"/><br/>
-			<label>Password:</label> <br/> <input class="cell" type="password" name="password"/><br/>
-			<input class='button' type="submit" name="login" value="Logga in"/>
+			<label>Lösenord:</label> <br/> <input class="cell" type="password" name="password"/><br/>
+			<input class='button' type="submit" name="login" value="Logga in"/><br/>
 		</form> <!-- #FORM -->
 
-		<p><a href="new_user.php">Skapa ny användare</a></p>
+		<p>Inget konto?</p>
+		<a href="new_user.php"><input class='button' type="submit" name="register" value="Registrera dig här"/></a>
 	</div>
 	
 <?php include "footer.php"; ?>

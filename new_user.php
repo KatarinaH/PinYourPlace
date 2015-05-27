@@ -22,6 +22,7 @@
 			<input type="password" id="password" name="password" placeholder="Lösenord"/><br/>
 			<input type="submit" value="Registrera dig!" name="reg" id="reg-btn">
 		</form>
+		<a href="index.php"><p><i class="fa fa-arrow-left"></i>Tillbaka till startsidan</p></a>
 	</div>
 </div>
 

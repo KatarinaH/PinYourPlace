@@ -28,6 +28,13 @@ body {
 #startpage, #registrate{
 	padding: 20px;
 	width: 80%;
+	a{
+		color: black;
+		text-decoration: none;
+	}
+	.fa{
+		margin-right: 5px;
+	}
 	input {
 		margin-bottom: 20px;
 	}

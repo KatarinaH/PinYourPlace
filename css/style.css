@@ -380,6 +380,11 @@ body {
 #startpage, #registrate {
   padding: 20px;
   width: 80%; }
+  #startpage a, #registrate a {
+    color: black;
+    text-decoration: none; }
+  #startpage .fa, #registrate .fa {
+    margin-right: 5px; }
   #startpage input, #registrate input {
     margin-bottom: 20px; }
 
