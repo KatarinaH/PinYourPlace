@@ -23,7 +23,6 @@ $(document).ready(function() {
 	});
 
 	$('.menu .info').on('click', function() {
-		console.log("hej");
 		$('.info_text').slideToggle('slow');
 	});
 
