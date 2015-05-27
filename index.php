@@ -30,14 +30,11 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 			echo "<p> $error_msg </p>"; //meddelande visas - okänd användare
 			echo "<p> $not_set_msg </p>"; //meddelande visas - ej ifyllda uppgifter
 		?>
-		<p class="info"><i class="fa fa-info-circle"></i>info</p>
 		<div id="wrapper_info">
-			<div class="info_text">
-				<i class="fa fa-times"></i>
-				<p>PinYourPlace är en tjänst för att spara platser som man har besökt och som man vill minnas för sig själv och tipsa andra om. På så sätt har du alltid ett tips på en bra restaurang, ett trevligt hotell, bra shoppingplatser och roliga nöjen. Det är inte svårare än så, klicka på kartan där du har ett tips och börja pinna!</p>
-			</div>
+			<h3>Välkommen!</h3>
+			<p>PinYourPlace är en tjänst för att spara platser som man har besökt och som man vill minnas för sig själv och tipsa andra om. På så sätt hittar du alltid tips på bra restauranger, trevliga hotell, nya shoppingplatser och roliga nöjen.</p>
 		</div>
-		<h2>Logga in</h2>	
+		<h3>Logga in</h3>	
 		
 			
 		<!--Formulär där användaren kan logga in-->
