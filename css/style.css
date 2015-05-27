@@ -444,6 +444,10 @@ body {
     margin: 10px auto;
     padding: 10px;
     width: 80%; }
+    #wrapper_info .info_text .fa-times {
+      color: #EB3B83;
+      float: right;
+      font-size: 2em; }
 
 /**************************  MAP  *****************************/
 #wrapper_map #content_map {
