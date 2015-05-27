@@ -1,4 +1,7 @@
 var markers = [];
+
+window.history.forward();
+
 $(document).ready(function() {
 	var infowindow;
 
