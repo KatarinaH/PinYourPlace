@@ -472,6 +472,8 @@ body {
     margin-bottom: 20px; }
   #info select {
     font-family: "FontAwesome", arial; }
+  #info #cancel {
+    color: #EB3B83; }
 
 @media screen and (min-width: 1200px) {
   /**************************************************************/
