@@ -356,7 +356,7 @@ th {
 /*************************GENERAL******************************/
 /**************************************************************/
 body {
-  background: url("../img/bg-img.jpg") no-repeat center center fixed;
+  background: url("../img/bg-img-m.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -481,6 +481,14 @@ body {
     color: #EB3B83; }
 
 @media screen and (min-width: 1200px) {
+  body {
+    background: url("../img/bg-img.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh; }
+
   /**************************************************************/
   /*************************LOGO MENU****************************/
   /**************************************************************/
