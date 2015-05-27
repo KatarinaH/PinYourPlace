@@ -124,6 +124,8 @@ $(document).ready(function() {
 					content: contentString
 			    });
 
+			    markers.push(marker);
+
 			    var contentString = '<div id="pinInfo"><h2>' + title + '</h2><p>Adress: ' + address + '</p><p>Beskrivning: ' + description + '</p>';
 
 			    var infowindow = new google.maps.InfoWindow({
