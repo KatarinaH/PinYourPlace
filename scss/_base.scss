@@ -38,9 +38,6 @@ body {
 	input {
 		margin-bottom: 20px;
 	}
-	.form{
-		width: 100%;
-	}
 }
 /**************************************************************/
 /*************************LOGO MENU****************************/
@@ -61,13 +58,13 @@ body {
 .mobile_menu {
 	left: 6%;
 	position: absolute;
-	top: 3%;
+	top: 6%;
 	width: 90%;
 	z-index: 1;
 	.fa-bars{
 		color: #EB3B83;
 		cursor: pointer;
-		font-size: 7em;
+		font-size: 2em;
 	}
 
 	#menu_content {
