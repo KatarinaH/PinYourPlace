@@ -21,4 +21,9 @@ $(document).ready(function() {
 	$('.mobile_menu ul li').on('click', function(){
 		$('#menu_content').slideToggle('slow');
 	});
+
+	$('.menu .info').on('click', function() {
+		console.log("hej");
+		$('.info_text').slideToggle('slow');
+	});
 });
