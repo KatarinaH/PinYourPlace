@@ -10,7 +10,7 @@ $(document).ready(function() {
   	
 	//Betsämmer vilken del av kartan man ska se.
 	var mapOptions = {
-		//center: {lat: 59.346027, lng: 18.058272},
+		center: {lat: 59.346027, lng: 18.058272},
 		zoom: 14,
 		scrollwheel: false,
 	};
@@ -33,7 +33,8 @@ $(document).ready(function() {
 		mapOptions
 	);
 
-	map.setOptions({styles: mapStyle}); //Anropar styling för kartan
+	//Anropar styling för kartan
+	map.setOptions({styles: mapStyle}); 
 
 	google.maps.event.addListener(map, 'click', function(e){
 		var lat = e.latLng.A;
