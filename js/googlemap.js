@@ -121,7 +121,8 @@ $(document).ready(function() {
 			    	title: title,
 					animation: google.maps.Animation.DROP,
 					icon: images[category - 1],
-					content: contentString
+					content: contentString,
+					category: category
 			    });
 
 			    markers.push(marker);
