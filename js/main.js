@@ -25,4 +25,8 @@ $(document).ready(function() {
 	$('.menu .info').on('click', function() {
 		$('.info_text').slideToggle('slow');
 	});
+
+	$('#cancel').on('click', function(){
+		$("#info").slideToggle('slow');
+	});
 });
