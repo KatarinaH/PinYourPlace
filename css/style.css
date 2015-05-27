@@ -446,6 +446,7 @@ body {
     width: 80%; }
     #wrapper_info .info_text .fa-times {
       color: #EB3B83;
+      cursor: pointer;
       float: right;
       font-size: 2em; }
 

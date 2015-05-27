@@ -26,6 +26,10 @@ $(document).ready(function() {
 		$('.info_text').slideToggle('slow');
 	});
 
+	$('.fa-times').on('click', function(){
+		$('.info_text').slideToggle('slow');
+	});
+
 	$('#cancel').on('click', function(){
 		$("#info").slideToggle('slow');
 	});
