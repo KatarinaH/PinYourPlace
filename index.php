@@ -46,7 +46,7 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 		<?php echo "<p> $succeed_reg </p>";?>
 			
 		<!--Formulär där användaren kan logga in-->
-		<form method="post" action="checkuser.php">
+		<form class="form" method="post" action="checkuser.php">
 			<label>Användarnamn:</label> <br/> <input class="cell" type="text" name="username"/><br/>
 			<label>Lösenord:</label> <br/> <input class="cell" type="password" name="password"/><br/>
 			<input class='button' type="submit" name="login" value="Logga in"/><br/>

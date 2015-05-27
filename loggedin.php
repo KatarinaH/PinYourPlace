@@ -68,7 +68,7 @@ if(isset($_GET["empty"])){
 			<p>Klicka på kartan där du vill lägga till en ny pin!</p>
 			<?php echo "<p> $empty </p>"; ?>
 			<div id="info">
-				<form id="createPin" method="post">
+				<form class="form" id="createPin" method="post">
 					<input type="text" id="lng" name="lng"/><br/>
 					<input type="text" id="lat" name="lat"/><br/>
 					<input type="text" id="pintitle" name="title" placeholder="Titel"/><br/>

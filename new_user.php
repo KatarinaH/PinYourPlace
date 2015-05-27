@@ -14,7 +14,7 @@
 <div id="wrapper_register">	
 	<div id="registrate">
 		<h2>Registrera dig här </h2>
-		<form method="post" action="">
+		<form class="form" method="post" action="">
 			<input type="text" id="contact_name" name="fname" placeholder="Förnamn"/><br/>
 			<input type="text" id="contact_lname" name="lname" placeholder="Efternamn"/><br/>
 			<input type="email" id="contact_email" name="email" placeholder="Email"/><br/>
