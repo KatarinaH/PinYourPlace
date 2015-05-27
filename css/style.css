@@ -440,7 +440,7 @@ body {
     height: 70vh;
     margin: 0 auto;
     margin-top: 30px;
-    width: 300px; }
+    width: 90%; }
   #wrapper_map #content_map #new_pin {
     display: block;
     margin: 0 auto;
