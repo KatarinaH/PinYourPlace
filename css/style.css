@@ -434,6 +434,8 @@ body {
           color: #EB3B83;
           text-decoration: none;
           text-transform: uppercase; }
+    .mobile_menu #menu_content .fa {
+      margin-right: 5px; }
 
 /**************************************************************/
 /**************************LOGGEDIN****************************/
@@ -463,6 +465,7 @@ body {
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 30px;
+    overflow: hidden;
     width: 90%; }
   #wrapper_map #content_map #new_pin {
     display: block;
