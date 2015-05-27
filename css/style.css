@@ -434,6 +434,8 @@ body {
           color: #EB3B83;
           text-decoration: none;
           text-transform: uppercase; }
+    .mobile_menu #menu_content .fa {
+      margin-right: 5px; }
 
 /**************************************************************/
 /**************************LOGGEDIN****************************/
