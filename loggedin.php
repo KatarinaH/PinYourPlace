@@ -29,11 +29,12 @@ if(isset($_GET["empty"])){
 		<i class="fa fa-bars"></i>
 		<div id="menu_content" class="menu">
 			<ul>
-				<li class="all"> Alla <i class="fa fa-globe"></i></li>
+				<li class="all"> Alla Pins<i class="fa fa-globe"></i></li>
 				<li class="1"> Restauranger <i class="fa fa-cutlery"></i></li>
 				<li class="2"> Hotell <i class="fa fa-bed"></i></li>
 				<li class="3"> Affärer <i class="fa fa-shopping-cart"></i></li>
 				<li class="4"> Nöjen <i class="fa fa-glass"></i></li>
+				<li class="info"> Info <i class="fa fa-info-circle"></i></li>
 				<li><a href="index.php?loggedout">Logga ut <i class="fa fa-sign-out"></i></a></li>
 			</ul>
 		</div>
@@ -48,8 +49,16 @@ if(isset($_GET["empty"])){
 				<li class="2"><i class="fa fa-bed"></i> Hotell </li>
 				<li class="3"><i class="fa fa-shopping-cart"></i> Affärer </li>
 				<li class="4"><i class="fa fa-glass"></i> Nöjen </li>
+				<li class="info"><i class="fa fa-info-circle"></i> Info </li>
 				<li><a href="index.php?loggedout"><i class="fa fa-sign-out"></i>Logga ut </a></li>
 			</ul>
+		</div>
+	</div>
+
+	<div id="wrapper_info">
+		<div class="info_text">
+			<h2>Info</h2>
+			<p>PinYourPlace är en tjänst för att spara platser som man har besökt och som man vill minnas för sig själv och tipsa andra om. På så sätt har du alltid ett tips på en bra restaurang, ett trevligt hotell, bra shoppingplatser och roliga nöjen. Det är inte svårare än så, klicka på kartan där du har ett tips och börja pinna!</p>
 		</div>
 	</div>
 
