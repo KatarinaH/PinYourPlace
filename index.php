@@ -4,10 +4,7 @@ include "header.php";
 //om man har klickat på "logga ut" avslutas session
 if(isset($_GET["loggedout"])) { 
 	unset($_SESSION["logged_in"]);
-	$logged_out_msg = "<p class='error'>Du är nu utloggad</p>";	
-} else {
-	$logged_out_msg = "";
-}
+} 
 
 //om man försöker gå in på dashboard, new_post eller comments utan att vara inloggad 
 if(isset($_GET["not_set"])){ 
@@ -30,11 +27,16 @@ if(isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] == "TRUE") {
 ?>
 	<div id="startpage">
 		<?php	
-			echo "<p> $logged_out_msg </p>"; //meddelande visas - utloggad
 			echo "<p> $error_msg </p>"; //meddelande visas - okänd användare
 			echo "<p> $not_set_msg </p>"; //meddelande visas - ej ifyllda uppgifter
 		?>
-
+		<p class="info"><i class="fa fa-info-circle"></i>info</p>
+		<div id="wrapper_info">
+			<div class="info_text">
+				<i class="fa fa-times"></i>
+				<p>PinYourPlace är en tjänst för att spara platser som man har besökt och som man vill minnas för sig själv och tipsa andra om. På så sätt har du alltid ett tips på en bra restaurang, ett trevligt hotell, bra shoppingplatser och roliga nöjen. Det är inte svårare än så, klicka på kartan där du har ett tips och börja pinna!</p>
+			</div>
+		</div>
 		<h2>Logga in</h2>	
 		
 			

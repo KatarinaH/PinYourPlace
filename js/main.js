@@ -22,7 +22,7 @@ $(document).ready(function() {
 		$('#menu_content').slideToggle('slow');
 	});
 
-	$('.menu .info').on('click', function() {
+	$('.info').on('click', function() {
 		$('.info_text').slideToggle('slow');
 	});
 

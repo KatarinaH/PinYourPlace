@@ -50,7 +50,7 @@ if(isset($_GET["empty"])){
 				<li class="3"><i class="fa fa-shopping-cart"></i> Affärer </li>
 				<li class="4"><i class="fa fa-glass"></i> Nöjen </li>
 				<li class="info"><i class="fa fa-info-circle"></i> Info </li>
-				<li><a href="index.php?loggedout"><i class="fa fa-sign-out"></i>Logga ut </a></li>
+				<li><a href="index.php"><i class="fa fa-sign-out"></i>Logga ut </a></li>
 			</ul>
 		</div>
 	</div>

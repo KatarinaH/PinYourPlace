@@ -387,6 +387,8 @@ body {
     margin-right: 5px; }
   #startpage input, #registrate input {
     margin-bottom: 20px; }
+  #startpage .info .fa-info-circle, #registrate .info .fa-info-circle {
+    font-size: 2em; }
 
 /**************************************************************/
 /*************************LOGO MENU****************************/
